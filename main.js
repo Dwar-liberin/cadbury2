@@ -19,7 +19,7 @@
               appName: "DwAR",
               customerId: "4",
               campaignName: "cadbury2",
-              serverUrl: "https://staging.lttl.in/event"
+              serverUrl: "https://lttl.in/event"
           }
        );
 
@@ -130,12 +130,12 @@
   const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
   scene.add(light);
 
-  const loadFont = () => {
+  const loadFont = (fontURL) => {
     return new Promise((resolve, reject) => {
       const loader = new THREE.FontLoader();
 
       loader.load(
-        "https://cdn.jsdelivr.net/gh/mrdoob/three.js/examples/fonts/helvetiker_regular.typeface.json",
+        fontURL,
         (font) => {
           resolve(font); // Resolve the promise with the loaded font
         },
@@ -147,82 +147,86 @@
     });
   };
 
-  const font = await loadFont();
-  
-
   
     
-      const image_fad25e3f_ac6e186c_iconGeometry = new THREE.PlaneGeometry(1, 1);
-   const image_fad25e3f_ac6e186c_texture = await loadTexture("assets/image 242 (1).png");
-  const image_fad25e3f_ac6e186c_image = new THREE.MeshBasicMaterial({
-      map: image_fad25e3f_ac6e186c_texture,
+      const image_fad25e3f_ac6a2559_iconGeometry = new THREE.PlaneGeometry(1, 1);
+   const image_fad25e3f_ac6a2559_texture = await loadTexture("assets/image 242 (1).png");
+  const image_fad25e3f_ac6a2559_image = new THREE.MeshBasicMaterial({
+      map: image_fad25e3f_ac6a2559_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
     });
-    const image_fad25e3f_ac6e186c = new THREE.Mesh(image_fad25e3f_ac6e186c_iconGeometry, image_fad25e3f_ac6e186c_image);
-    image_fad25e3f_ac6e186c.scale.set(0.25, 0.25, 0.3);
-    image_fad25e3f_ac6e186c.position.set(-0.3, -0.55, 0.04);
-    image_fad25e3f_ac6e186c.rotation.set(-0.001, 0, 0);
-    image_fad25e3f_ac6e186c.userData.clickable = true
+    const image_fad25e3f_ac6a2559 = new THREE.Mesh(image_fad25e3f_ac6a2559_iconGeometry, image_fad25e3f_ac6a2559_image);
+    image_fad25e3f_ac6a2559.scale.set(0.25, 0.25, 0.3);
+    image_fad25e3f_ac6a2559.position.set(-0.3, -0.55, 0.04);
+    image_fad25e3f_ac6a2559.rotation.set(0, 0, 0);
+    image_fad25e3f_ac6a2559.userData.clickable = true
     
-    image_fad25e3f_ac6e186c.userData.eventName ="Blinkit"
-const target_imageundefi6559a_iconGeometry = new THREE.PlaneGeometry(1, 0.5625);
-   const target_imageundefi6559a_texture = await loadTexture("assets/cadury marker 2.png");
-  const target_imageundefi6559a_image = new THREE.MeshBasicMaterial({
-      map: target_imageundefi6559a_texture,
+    image_fad25e3f_ac6a2559.userData.eventName ="Blinkit"
+const target_imagecadury4ab18_iconGeometry = new THREE.PlaneGeometry(1, 0.5625);
+   const target_imagecadury4ab18_texture = await loadTexture("assets/cadury marker 2.png");
+  const target_imagecadury4ab18_image = new THREE.MeshBasicMaterial({
+      map: target_imagecadury4ab18_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
     });
-    const target_imageundefi6559a = new THREE.Mesh(target_imageundefi6559a_iconGeometry, target_imageundefi6559a_image);
-    target_imageundefi6559a.scale.set(1, 1, 1);
-    target_imageundefi6559a.position.set(0.01, -0.01, 0.01);
-    target_imageundefi6559a.rotation.set(-0.001, 0, 0);
+    const target_imagecadury4ab18 = new THREE.Mesh(target_imagecadury4ab18_iconGeometry, target_imagecadury4ab18_image);
+    target_imagecadury4ab18.scale.set(1, 1, 1);
+    target_imagecadury4ab18.position.set(0.01, -0.01, 0.01);
+    target_imagecadury4ab18.rotation.set(-0.001, 0, 0);
     
     
     
-const image_c215798b_efad6083_iconGeometry = new THREE.PlaneGeometry(1, 1);
-   const image_c215798b_efad6083_texture = await loadTexture("assets/image 244.png");
-  const image_c215798b_efad6083_image = new THREE.MeshBasicMaterial({
-      map: image_c215798b_efad6083_texture,
+const image_c215798b_efad8675_iconGeometry = new THREE.PlaneGeometry(1, 1);
+   const image_c215798b_efad8675_texture = await loadTexture("assets/image 244.png");
+  const image_c215798b_efad8675_image = new THREE.MeshBasicMaterial({
+      map: image_c215798b_efad8675_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
     });
-    const image_c215798b_efad6083 = new THREE.Mesh(image_c215798b_efad6083_iconGeometry, image_c215798b_efad6083_image);
-    image_c215798b_efad6083.scale.set(0.25, 0.25, 0.3);
-    image_c215798b_efad6083.position.set(0.3, -0.55, 0.04);
-    image_c215798b_efad6083.rotation.set(-0.001, 0, 0);
-    image_c215798b_efad6083.userData.clickable = true
+    const image_c215798b_efad8675 = new THREE.Mesh(image_c215798b_efad8675_iconGeometry, image_c215798b_efad8675_image);
+    image_c215798b_efad8675.scale.set(0.25, 0.25, 0.3);
+    image_c215798b_efad8675.position.set(0.3, -0.55, 0.04);
+    image_c215798b_efad8675.rotation.set(0, 0, 0);
+    image_c215798b_efad8675.userData.clickable = true
     
-    image_c215798b_efad6083.userData.eventName ="Amazon"
+    image_c215798b_efad8675.userData.eventName ="Amazon"
 
-    const video_asset_bb749cbdc4f_planeGeometry = new THREE.PlaneGeometry(1, 0.5625);
+    const video_asset_bb749c0937d_planeGeometry = new THREE.PlaneGeometry(1, 0.5625);
 
-    const video_asset_bb749cbdc4f_Item0Video = await loadVideo("assets/Rakhi-video.mp4");
+    const video_asset_bb749c0937d_Item0Video = await loadVideo("assets/Rakhi-video.mp4");
 
-    const video_asset_bb749cbdc4f_Item0VideoTexture = new THREE.VideoTexture(
-      video_asset_bb749cbdc4f_Item0Video
+    const video_asset_bb749c0937d_Item0VideoTexture = new THREE.VideoTexture(
+      video_asset_bb749c0937d_Item0Video
     );
 
-    let video_asset_bb749cbdc4f_Item0VideoMaterial
+    let video_asset_bb749c0937d_Item0VideoMaterial
 
-      video_asset_bb749cbdc4f_Item0VideoMaterial = new THREE.MeshBasicMaterial({
-          map: video_asset_bb749cbdc4f_Item0VideoTexture,
+      video_asset_bb749c0937d_Item0VideoMaterial = new THREE.MeshBasicMaterial({
+          map: video_asset_bb749c0937d_Item0VideoTexture,
+          transparent:true
         })
     
-     const video_asset_bb749cbdc4f = new THREE.Mesh(
-      video_asset_bb749cbdc4f_planeGeometry,
-      video_asset_bb749cbdc4f_Item0VideoMaterial
+     const video_asset_bb749c0937d = new THREE.Mesh(
+      video_asset_bb749c0937d_planeGeometry,
+      video_asset_bb749c0937d_Item0VideoMaterial
     );
 
-  video_asset_bb749cbdc4f.position.set(0, 0, 0);
+  video_asset_bb749c0937d.position.set(0, 0, 0);
 
 
 
   if (isIOS) {
-    video_asset_bb749cbdc4f_Item0Video.muted=isIOS
+    video_asset_bb749c0937d_Item0Video.muted=isIOS
     muteIconMesh = await loadUnmuteLogo();
     anchor.group.add(muteIconMesh);
   }
 
-  video_asset_bb749cbdc4f_Item0Video.loop=true;
+  video_asset_bb749c0937d_Item0Video.loop=true;
   
-  video_asset_bb749cbdc4f.scale.set(1.2, 1.2, 1.2);
+  video_asset_bb749c0937d.scale.set(1.2, 1.2, 1.2);
 
-    video_asset_bb749cbdc4f.rotation.set(-0.005, 0, 0);
+    video_asset_bb749c0937d.rotation.set(0, 0, 0);
 
     
   
@@ -258,7 +262,7 @@ const image_c215798b_efad6083_iconGeometry = new THREE.PlaneGeometry(1, 1);
 
         if(isIOS){ 
           if (o.userData.clickable && o === muteIconMesh) {
-            video_asset_bb749cbdc4f_Item0Video.muted=false
+            video_asset_bb749c0937d_Item0Video.muted=false
     
             anchor.group.remove(muteIconMesh);
             return true;
@@ -271,14 +275,14 @@ const image_c215798b_efad6083_iconGeometry = new THREE.PlaneGeometry(1, 1);
       if (o.userData.clickable) window.showLoadingScreen();
 
       
-      if (o.userData.clickable && o === image_fad25e3f_ac6e186c) {
+      if (o.userData.clickable && o === image_fad25e3f_ac6a2559) {
         setTimeout(()=>{
           window.location.href = "https://blinkit.com/s/?q=cadbury%20chocolate"
         },100)
         }
       
 
-      if (o.userData.clickable && o === image_c215798b_efad6083) {
+      if (o.userData.clickable && o === image_c215798b_efad8675) {
         setTimeout(()=>{
           window.location.href = "https://www.amazon.in/s?k=cadbury+chocolates&crid=37Y8EP2W30VPK&sprefix=cad%2Caps%2C459&ref=nb_sb_ss_ts-doa-p_1_3"
         },100)
@@ -289,10 +293,10 @@ const image_c215798b_efad6083_iconGeometry = new THREE.PlaneGeometry(1, 1);
     })
     
       
-    anchor.group.add(image_fad25e3f_ac6e186c)
+    anchor.group.add(image_fad25e3f_ac6a2559)
 
-anchor.group.add(image_c215798b_efad6083)
-anchor.group.add(video_asset_bb749cbdc4f)
+anchor.group.add(image_c215798b_efad8675)
+anchor.group.add(video_asset_bb749c0937d)
 
 
     anchor.onTargetFound = () => {
@@ -310,12 +314,12 @@ anchor.group.add(video_asset_bb749cbdc4f)
 
 
      
-      video_asset_bb749cbdc4f_Item0Video.play();
+      video_asset_bb749c0937d_Item0Video.play();
     };
 
 
     anchor.onTargetLost = () => {
-       video_asset_bb749cbdc4f_Item0Video.pause();
+       video_asset_bb749c0937d_Item0Video.pause();
 
         
 
